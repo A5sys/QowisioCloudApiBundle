@@ -1,6 +1,6 @@
 <?php
 
-namespace QowisioCloudApiBundle\DependencyInjection;
+namespace A5sys\QowisioCloudApiBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

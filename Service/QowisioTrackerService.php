@@ -1,8 +1,8 @@
 <?php
 
-namespace QowisioCloudApiBundle\Service;
+namespace A5sys\QowisioCloudApiBundle\Service;
 
-use QowisioCloudApiBundle\CookedMeasure\Coordinate;
+use A5sys\QowisioCloudApiBundle\CookedMeasure\Coordinate;
 
 /**
  * service to get data from a GPS device (named tracker)
@@ -24,7 +24,7 @@ class QowisioTrackerService
 
     /**
      * Constructor
-     * @param \QowisioCloudApiBundle\Service\QowisioApiMeasuresService $measuresService
+     * @param \A5sys\QowisioCloudApiBundle\Service\QowisioApiMeasuresService $measuresService
      */
     public function __construct(QowisioApiMeasuresService $measuresService)
     {
@@ -34,7 +34,8 @@ class QowisioTrackerService
     /**
      * Get the 100 last GPS coordinates from the device
      * @param string $deviceUid the UID of the device
-     * @param string $sort optionnal default QowisioTrackerService::SORT_DESC. one of QowisioTrackerService::SORT_DESC or QowisioTrackerService::SORT_ASC
+     * @param string $sort      optionnal default QowisioTrackerService::SORT_DESC. one of QowisioTrackerService::SORT_DESC or QowisioTrackerService::SORT_ASC
+     * @return array<Coordinate>
      */
     public function getLastCoordinates($deviceUid, $sort = self::SORT_DESC)
     {
@@ -46,11 +47,12 @@ class QowisioTrackerService
 
     /**
      * Get the GPS coordinates from the device
-     * @param string $deviceUid the UID of the device
-     * @param \DateTime $from Date when search starts
-     * @param \DateTime $to Date when search stop
-     * @param integer   $limit optionnal default 100
-     * @param string    $sort optionnal default QowisioTrackerService::SORT_DESC. one of QowisioTrackerService::SORT_DESC or QowisioTrackerService::SORT_ASC
+     * @param string    $deviceUid The UID of the device
+     * @param \DateTime $from      Date when search starts
+     * @param \DateTime $to        Date when search stop
+     * @param integer   $limit     optionnal default 100
+     * @param string    $sort      optionnal default QowisioTrackerService::SORT_DESC. one of QowisioTrackerService::SORT_DESC or QowisioTrackerService::SORT_ASC
+     * @return array<Coordinate>
      */
     public function getCoordinates($deviceUid, \DateTime $from, \DateTime $to, $limit = 100, $sort = self::SORT_DESC)
     {
@@ -80,10 +82,11 @@ class QowisioTrackerService
         }
 
         if ($sort === static::SORT_ASC) {
-            $ascending = function($coordA, $coordB) {
+            $ascending = function ($coordA, $coordB) {
                 if ($coordA->getTimestampCollected() === $coordB->getTimestampCollected()) {
                     return 0;
                 }
+
                 return $coordA->getTimestampCollected() < $coordB->getTimestampCollected() ? -1 : 1;
             };
             usort($coordinates, $ascending);

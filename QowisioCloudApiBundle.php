@@ -1,6 +1,6 @@
 <?php
 
-namespace QowisioCloudApiBundle;
+namespace A5sys\QowisioCloudApiBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

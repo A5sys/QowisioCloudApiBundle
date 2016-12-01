@@ -1,6 +1,6 @@
 <?php
 
-namespace QowisioCloudApiBundle\Service;
+namespace A5sys\QowisioCloudApiBundle\Service;
 
 /**
  * Access description of your objects and sensors
@@ -20,7 +20,7 @@ class QowisioApiDevicesAndSensorsService
 
     /**
      * Constructor
-     * @param \QowisioCloudApiBundle\Service\QowisioApiCaller $apiCaller
+     * @param \A5sys\QowisioCloudApiBundle\Service\QowisioApiCaller $apiCaller
      */
     public function __construct(QowisioApiCaller $apiCaller)
     {

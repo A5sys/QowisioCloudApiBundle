@@ -1,6 +1,6 @@
 <?php
 
-namespace QowisioCloudApiBundle\Exception;
+namespace A5sys\QowisioCloudApiBundle\Exception;
 
 /**
  * When credentials are wrong

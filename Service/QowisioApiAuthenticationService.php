@@ -1,8 +1,8 @@
 <?php
 
-namespace QowisioCloudApiBundle\Service;
+namespace A5sys\QowisioCloudApiBundle\Service;
 
-use QowisioCloudApiBundle\Exception\QowisioException;
+use A5sys\QowisioCloudApiBundle\Exception\QowisioException;
 
 /**
  * Test if your user is authenticated
@@ -21,7 +21,7 @@ class QowisioApiAuthenticationService
 
     /**
      * Constructor
-     * @param \QowisioCloudApiBundle\Service\QowisioApiCaller $apiCaller
+     * @param \A5sys\QowisioCloudApiBundle\Service\QowisioApiCaller $apiCaller
      */
     public function __construct(QowisioApiCaller $apiCaller)
     {

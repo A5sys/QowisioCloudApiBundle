@@ -1,6 +1,6 @@
 <?php
 
-namespace QowisioCloudApiBundle\Service;
+namespace A5sys\QowisioCloudApiBundle\Service;
 
 use Eljam\GuzzleJwt\JwtMiddleware;
 use Eljam\GuzzleJwt\Manager\JwtManager;
@@ -8,8 +8,8 @@ use Eljam\GuzzleJwt\Strategy\Auth\JsonAuthStrategy;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\HandlerStack;
-use QowisioCloudApiBundle\Exception\QowisioCredentialsException;
-use QowisioCloudApiBundle\Exception\QowisioException;
+use A5sys\QowisioCloudApiBundle\Exception\QowisioCredentialsException;
+use A5sys\QowisioCloudApiBundle\Exception\QowisioException;
 
 /**
  * service to call Web Services against Qowisio Cloud API
