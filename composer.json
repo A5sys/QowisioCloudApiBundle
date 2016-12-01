@@ -1,0 +1,15 @@
+{
+    "name": "a5sys/quowisio-cloud-api-bundle",
+    "type": "library",
+    "description": "Access data from Qowisio Cloud API",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6",
+        "symfony/symfony": ">=2.7",
+        "guzzlehttp/guzzle": "^6.2",
+        "eljam/guzzle-jwt-middleware": "^0.3.0"
+    },
+    "autoload": {
+        "psr-4": { "A5sys\\QowisioCloudApiBundle\\": "" }
+    }
+}
