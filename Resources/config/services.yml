@@ -1,14 +1,14 @@
 parameters:
     # Service to call Qowisio WS
-    qowisio.cloud.api.caller.class: 'QowisioCloudApiBundle\Service\QowisioApiCaller'
+    qowisio.cloud.api.caller.class: 'A5sys\QowisioCloudApiBundle\Service\QowisioApiCaller'
     # Service to get auth infos
-    qowisio.cloud.api.authentication.class: 'QowisioCloudApiBundle\Service\QowisioApiAuthenticationService'
+    qowisio.cloud.api.authentication.class: 'A5sys\QowisioCloudApiBundle\Service\QowisioApiAuthenticationService'
     # Service to get devices and sensors data
-    qowisio.cloud.api.devices.and.sensors.class: 'QowisioCloudApiBundle\Service\QowisioApiDevicesAndSensorsService'
+    qowisio.cloud.api.devices.and.sensors.class: 'A5sys\QowisioCloudApiBundle\Service\QowisioApiDevicesAndSensorsService'
     # Service to get measures data
-    qowisio.cloud.api.measures.class: 'QowisioCloudApiBundle\Service\QowisioApiMeasuresService'
+    qowisio.cloud.api.measures.class: 'A5sys\QowisioCloudApiBundle\Service\QowisioApiMeasuresService'
     # Service to get data from a GPS device (named tracker)
-    qowisio.tracker.class: 'QowisioCloudApiBundle\Service\QowisioTrackerService'
+    qowisio.tracker.class: 'A5sys\QowisioCloudApiBundle\Service\QowisioTrackerService'
 
 services:
     # makes the calls to API

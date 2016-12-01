@@ -1,6 +1,6 @@
 <?php
 
-namespace QowisioCloudApiBundle\CookedMeasure;
+namespace A5sys\QowisioCloudApiBundle\CookedMeasure;
 
 /**
  * Represents a GPS coordinate, with latitude and longitude

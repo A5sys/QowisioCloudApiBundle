@@ -1,6 +1,6 @@
 <?php
 
-namespace QowisioCloudApiBundle\Service;
+namespace A5sys\QowisioCloudApiBundle\Service;
 
 /**
  * Access description of your objects and sensors
@@ -18,7 +18,7 @@ class QowisioApiMeasuresService
 
     /**
      * Constructor
-     * @param \QowisioCloudApiBundle\Service\QowisioApiCaller $apiCaller
+     * @param \A5sys\QowisioCloudApiBundle\Service\QowisioApiCaller $apiCaller
      */
     public function __construct(QowisioApiCaller $apiCaller)
     {
@@ -44,9 +44,9 @@ class QowisioApiMeasuresService
     /**
      * Return a maximum of 100 measures from present to past.<br>
      * You can add 'from_date' and 'to_date' filters to request data on a specific range and 'limit', to limit the number of results.<br>
-     * @param string $sensorUid
-     * @param \DateTime $from Date when search starts
-     * @param \DateTime $to Date when search stop
+     * @param string    $sensorUid
+     * @param \DateTime $from      Date when search starts
+     * @param \DateTime $to        Date when search stop
      * @param integer   $limit
      * @return array
      */
