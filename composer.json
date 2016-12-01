@@ -4,7 +4,7 @@
     "description": "Access data from Qowisio Cloud API",
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.6",
+        "php": ">=5.5.9",
         "symfony/symfony": ">=2.7",
         "guzzlehttp/guzzle": "^6.2",
         "eljam/guzzle-jwt-middleware": "^0.3.0"
