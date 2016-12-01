@@ -1,0 +1,45 @@
+parameters:
+    # Service to call Qowisio WS
+    qowisio.cloud.api.caller.class: 'QowisioCloudApiBundle\Service\QowisioApiCaller'
+    # Service to get auth infos
+    qowisio.cloud.api.authentication.class: 'QowisioCloudApiBundle\Service\QowisioApiAuthenticationService'
+    # Service to get devices and sensors data
+    qowisio.cloud.api.devices.and.sensors.class: 'QowisioCloudApiBundle\Service\QowisioApiDevicesAndSensorsService'
+    # Service to get measures data
+    qowisio.cloud.api.measures.class: 'QowisioCloudApiBundle\Service\QowisioApiMeasuresService'
+    # Service to get data from a GPS device (named tracker)
+    qowisio.tracker.class: 'QowisioCloudApiBundle\Service\QowisioTrackerService'
+
+services:
+    # makes the calls to API
+    qowisio.cloud.api.caller:
+        class: %qowisio.cloud.api.caller.class%
+        arguments:
+            - %qowisio.cloud.api.auth.endpoint%
+            - %qowisio.cloud.api.auth.email%
+            - %qowisio.cloud.api.auth.password%
+            - %qowisio.cloud.api.data.endpoint%
+
+    # Get infos about authentication
+    qowisio.cloud.api.authentication:
+        class: %qowisio.cloud.api.authentication.class%
+        arguments:
+            - "@qowisio.cloud.api.caller"
+
+    # Get infos about devices and their sensors
+    qowisio.cloud.api.devices.and.sensors:
+        class: %qowisio.cloud.api.devices.and.sensors.class%
+        arguments:
+            - "@qowisio.cloud.api.caller"
+
+    # Get infos about sensor measures
+    qowisio.cloud.api.measures:
+        class: %qowisio.cloud.api.measures.class%
+        arguments:
+            - "@qowisio.cloud.api.caller"
+
+    # Get info about the specific tracker device
+    qowisio.tracker:
+        class: %qowisio.tracker.class%
+        arguments:
+            - "@qowisio.cloud.api.measures"
