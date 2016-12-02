@@ -1,5 +1,5 @@
 {
-    "name": "a5sys/quowisio-cloud-api-bundle",
+    "name": "a5sys/qowisio-cloud-api-bundle",
     "type": "library",
     "description": "Access data from Qowisio Cloud API",
     "minimum-stability": "dev",
