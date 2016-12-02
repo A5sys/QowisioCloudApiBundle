@@ -16,7 +16,7 @@ Example : GPS is latitude and longitude. 2 values are sent at the same time in t
 
 composer
 
-    composer require "a5sys/quowisio-cloud-api-bundle"
+    composer require "a5sys/qowisio-cloud-api-bundle"
 
 AppKernel.php
 
